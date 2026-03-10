@@ -1,0 +1,98 @@
+.wrapper {
+  margin-top: 10vh;
+}
+.saved-heading,
+.favorite-heading {
+  padding: 15px 0 0 6%;
+  font-size: 35px;
+  color: #777;
+}
+.saved-container,
+.favorite-container {
+  background-color: var(--bg);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.saved-item,
+.favorite-item {
+  background-color: var(--cart);
+  color: var(--text);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 330px;
+  gap: 5px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.4s ease;
+}
+@media (max-width: 768px) {
+  .saved-container .saved-item {
+    width: 350px;
+    height: fit-content;
+  }
+  .saved-container .saved-item img {
+    height: 280px;
+  }
+}
+
+.saved-item:hover {
+  transform: translateY(-5px);
+}
+
+.saved-item img,
+.favorite-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.saved-item h3 {
+  font-size: 1rem;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.saved-item p {
+  font-size: 0.9rem;
+  color: var(--shadow);
+  margin-bottom: 10px;
+}
+
+.delete-btn {
+  background-color: white;
+  color: var(--mainColor);
+  width: 200px;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-top: 5px;
+}
+
+.delete-btn:hover {
+  background-color: var(--shadow);
+  color: var(--greenWhite);
+}
+
+.saved-empty {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.saved-empty h2 {
+  font-size: 1.5rem;
+  color: #777;
+}

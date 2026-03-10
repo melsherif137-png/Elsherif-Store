@@ -1,0 +1,85 @@
+:root {
+  --bg: white;
+  --text: black;
+  --oneDark: #092635;
+  --TwoDark: #1b4242;
+  --mainColor: #5c8374;
+  --greenWhite: #b3d6ca;
+  --cart: #b3d6ca;
+  --shadow: #5c8374;
+  --cartItems: white;
+  --bgHover: white;
+  --itemIn: #b3d6ca;
+  --green: #b3d6ca;
+}
+body.dark {
+  background-color: black;
+  --bg: black;
+  --text: white;
+  --oneDark: #092635;
+  --TwoDark: #1b4242;
+  --mainColor: #1b4242;
+  --greenWhite: #2b5062;
+  --cart: #1b4242;
+  --shadow: #ffffff;
+  --cartItems: #1b4242;
+  --bgHover: rgba(228, 227, 227, 0.588);
+  --itemIn: #546969;
+  transition: 1s ease;
+  --green: #b3d6ca;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Cairo", "Poppins", sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+.Button-card,
+.increament,
+.decreament {
+  background-color: white;
+  color: var(--mainColor);
+  border-radius: 15px;
+  border: 1px solid #088395;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.Button-card:hover,
+.decreament:hover,
+.increament:hover {
+  background-color: var(--shadow);
+  color: var(--greenWhite);
+  border: 1px solid var(--mainColor);
+}
+
+.increament,
+.decreament {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+.count-cart {
+  display: flex;
+  padding: 5px;
+}
+.in-cart {
+  display: flex;
+  margin-left: 10px;
+}

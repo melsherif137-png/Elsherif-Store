@@ -1,0 +1,113 @@
+.about {
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin-top: 10vh;
+  transition: 1s ease;
+}
+.about > .container {
+  margin: 0 7%;
+  border-radius: 24px;
+  background-color: var(--mainColor);
+  width: 100%;
+  height: 80%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  animation: all 0.4s ease;
+  transition: 1s ease;
+}
+@media (max-width: 768px) {
+  .about .container {
+    margin: 0;
+    height: 100%;
+    border-radius: 0;
+    overflow-y: visible;
+    padding: 20px;
+  }
+}
+.about-heading {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  display: block;
+  text-align: center;
+  max-width: 600px;
+  margin: 30px 0;
+  color: white;
+}
+@media (max-width: 768px) {
+  .about-heading {
+    margin: 10px 0;
+    padding: 10px;
+  }
+}
+.glow-text {
+  background: linear-gradient(to right, #0fd850, #a8aeab);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* animation: innerGlow 1.5s ease-in-out infinite alternate;
+  transition: 0.4s ease; */
+}
+
+.about-learn .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .about-learn .container {
+    display: flex;
+    flex-direction: column;
+    margin: 200px 0 60px 0;
+  }
+}
+
+.one-row {
+  text-align: center;
+  color: white;
+}
+.row-icon {
+  font-size: clamp(38px, 2vw, 1.2rem);
+}
+.aboutH3 {
+  font-size: clamp(30px, 2vw, 1rem);
+  padding-bottom: 15px;
+  /* color: var(--shadow); */
+}
+.aboutP {
+  line-height: 1.5;
+  min-width: 280px;
+  max-width: 350px;
+  color: rgba(228, 228, 228, 0.816);
+}
+.shopNow-button {
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .shopNow-button {
+    margin-top: 160px;
+  }
+  .one-row {
+    background-color: var(--oneDark);
+    padding: 10px 5px;
+    border-radius: 18px;
+  }
+  .row-icon {
+    color: rgba(228, 228, 228, 0.816);
+  }
+  .aboutH3 {
+    color: var(--shadow);
+  }
+  .aboutP {
+    color: rgba(228, 228, 228, 0.816);
+  }
+}
