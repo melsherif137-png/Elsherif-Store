@@ -154,20 +154,20 @@
 .AllTotal {
   padding: 20px;
 }
-/* From Uiverse.io by TaniaDou */
 .ClearButton {
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   border: none;
   font-size: 1rem;
   font-weight: 400;
-  color: white;
+  color: var(--text);
   text-align: center;
   position: relative;
   cursor: pointer;
   width: 200px;
   margin: 0 auto;
   font-weight: bold;
+  background-color: var(--itemIn);
 }
 
 .ClearButton::before {
@@ -180,7 +180,7 @@
   width: 100%;
   border-radius: 0.5rem;
   background:
-    linear-gradient(180deg, var(--twoDark) 0%, var(--mainColor) 100%),
+    linear-gradient(180deg, var(--mainColor) 0%, var(--mainColor) 100%),
     var(--mainColor);
   box-shadow: inset 0 0 12px rgba(151, 200, 255, 0.44);
   z-index: -1;
@@ -195,7 +195,8 @@
   width: 100%;
   height: 100%;
   background:
-    linear-gradient(180deg, var(--itemIn) 0%, var(--greenWhite) 100%), var(--bg);
+    linear-gradient(180deg, var(--mainColor) 0%, var(--mainColor) 100%),
+    var(--bg);
   box-shadow: inset 0 0 40px var(--cartItems);
   border-radius: 0.5rem;
   opacity: 0;

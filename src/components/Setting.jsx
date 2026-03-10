@@ -19,7 +19,15 @@ const Setting = ({ settingShow, setSettingShow, darkMode, dark }) => {
               : `/${link.toLowerCase()}`;
           return (
             <div className="element" key={index}>
-              <Link to={path} className="setting-link">
+              <Link
+                to={path}
+                className="setting-link"
+                onClick={() => {
+                  setTimeout(() => {
+                    setSettingShow(false);
+                  }, 100);
+                }}
+              >
                 {link}
               </Link>
             </div>

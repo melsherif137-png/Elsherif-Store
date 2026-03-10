@@ -6,7 +6,6 @@ const ExInSetting = ({ setSettingShow }) => {
     <div className="Ex sett">
       <h1 className="setting-head">Setting</h1>
       <FaTimes
-        clas
         onClick={() => {
           setSettingShow(false);
         }}
