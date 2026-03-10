@@ -8,7 +8,7 @@ const HomeImg = () => {
       transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
     >
       <img
-        src="public/assets/Gemini_Generated_Image_yfzus8yfzus8yfzu-removebg-preview.png"
+        src="src/assets/image/Gemini_Generated_Image_yfzus8yfzus8yfzu-removebg-preview.png"
         alt=""
       />
     </motion.div>
