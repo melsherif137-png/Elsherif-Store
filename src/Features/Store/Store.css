@@ -279,15 +279,14 @@
   height: 40px;
   border-radius: 25px;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.425);
+  background-color: var(--greenHover);
   outline: none;
   border: 1px solid black;
-  color: black;
+  color: var(--text);
   transition: 0.4s ease;
 }
 .item-details button:hover {
-  background-color: var(--greenWhite);
-  color: rgba(255, 255, 255, 0.425);
+  background-color: var(--cart);
   color: var(--text);
   border: 1px solid black;
 }

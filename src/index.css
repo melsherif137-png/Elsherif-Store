@@ -5,6 +5,7 @@
   --TwoDark: #1b4242;
   --mainColor: #5c8374;
   --greenWhite: #b3d6ca;
+  --greenHover: #b3d6ca;
   --cart: #b3d6ca;
   --shadow: #5c8374;
   --cartItems: white;
@@ -20,6 +21,7 @@ body.dark {
   --TwoDark: #1b4242;
   --mainColor: #1b4242;
   --greenWhite: #2b5062;
+  --greenHover: #1e5555;
   --cart: #1b4242;
   --shadow: #ffffff;
   --cartItems: #1b4242;

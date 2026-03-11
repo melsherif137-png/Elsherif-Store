@@ -40,7 +40,7 @@ const NavBar = ({ setShow, show, setSetting }) => {
         </ul>
 
         <div className="right">
-          {location.pathname.includes("/store") ? (
+          {location.pathname.endsWith("/store") ? (
             <button
               className={`cart ${show ? "active" : ""}`}
               onClick={() => {
