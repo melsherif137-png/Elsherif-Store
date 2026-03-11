@@ -2,7 +2,6 @@
   "name": "my-app",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://melsherif137-png.github.io/Elsherif-Store",
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "license": "ISC",
   "author": "",
@@ -12,9 +11,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^1.13.5",

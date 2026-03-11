@@ -3,7 +3,7 @@
     "id": 1,
     "name": "keyboard",
     "price": 500,
-    "image": "/src/assets/image/Products/download (4).jpg",
+    "image": "/public/Products/download (4).jpg",
     "rate": 3,
     "insteadOf": 650,
     "description": "High-quality wired keyboard with soft responsive keys, durable build, and comfortable typing experience. Perfect for daily office work and gaming."
@@ -12,7 +12,7 @@
     "id": 2,
     "name": "Headphone",
     "price": 300,
-    "image": "/src/assets/image/Products/The Fairphone (Gen_ 6) now with privacy-first _e_OS.jpg",
+    "image": "/public/Products/The Fairphone (Gen_ 6) now with privacy-first _e_OS.jpg",
     "rate": 3,
     "insteadOf": 450,
     "description": "Over-ear headphone with clear stereo sound and deep bass. Lightweight design with padded ear cushions for long listening sessions."
@@ -21,7 +21,7 @@
     "id": 3,
     "name": "Mouse",
     "price": 250,
-    "image": "/src/assets/image/Products/download (5).jpg",
+    "image": "/public/Products/download (5).jpg",
     "rate": 3,
     "insteadOf": 400,
     "description": "Ergonomic optical mouse with smooth tracking and fast response. Comfortable grip design suitable for work and gaming."
@@ -30,7 +30,7 @@
     "id": 4,
     "name": "Smart Watch",
     "price": 1200,
-    "image": "/src/assets/image/Products/Apple Watch Series 11 42mm Jet Black – Ultra Minimal Luxury Concept Design.jpg",
+    "image": "/public/Products/Apple Watch Series 11 42mm Jet Black – Ultra Minimal Luxury Concept Design.jpg",
     "rate": 4,
     "insteadOf": 1500,
     "description": "Modern smart watch with fitness tracking, heart rate monitoring, and notification support. Stylish design with long battery life."
@@ -39,7 +39,7 @@
     "id": 5,
     "name": "AirPods Pro 3",
     "price": 550,
-    "image": "/src/assets/image/Products/AirPods Pro 3.jpg",
+    "image": "/public/Products/AirPods Pro 3.jpg",
     "rate": 4,
     "insteadOf": 750,
     "description": "Wireless earbuds with active noise cancellation and high-quality sound. Compact design with fast charging case."
@@ -48,7 +48,7 @@
     "id": 6,
     "name": "Mini Speaker",
     "price": 600,
-    "image": "/src/assets/image/Products/Anker Soundcore mini, Super-Portable Bluetooth Speaker with 15-Hour Playtime, 66-Foot Bluetooth Range, Wireless Speaker with Enhanced Bass, Noise-Cancelling Microphone, for Outdoor, Travel, Home.jpg",
+    "image": "/public/Products/Anker Soundcore mini, Super-Portable Bluetooth Speaker with 15-Hour Playtime, 66-Foot Bluetooth Range, Wireless Speaker with Enhanced Bass, Noise-Cancelling Microphone, for Outdoor, Travel, Home.jpg",
     "rate": 5,
     "insteadOf": 800,
     "description": "Portable Bluetooth speaker with powerful bass and clear sound. Long battery life and compact design perfect for travel and outdoor use."
@@ -57,7 +57,7 @@
     "id": 7,
     "name": "Charging Pad",
     "price": 350,
-    "image": "/src/assets/image/Products/Wireless Charger 2_0.jpg",
+    "image": "/public/Products/Wireless Charger 2_0.jpg",
     "rate": 4,
     "insteadOf": 500,
     "description": "Fast wireless charging pad compatible with most smartphones. Slim design with safe temperature control technology."
@@ -66,7 +66,7 @@
     "id": 8,
     "name": "50W Adapter charger",
     "price": 450,
-    "image": "/src/assets/image/Products/iPhone 50W Power Adapter USB-C+C Original.jpg",
+    "image": "/public/Products/iPhone 50W Power Adapter USB-C+C Original.jpg",
     "rate": 4,
     "insteadOf": 600,
     "description": "High-speed 50W power adapter with dual USB-C ports. Supports fast charging for smartphones, tablets, and other devices."
