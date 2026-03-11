@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Counts from "./counts";
+import Counts from "./Counts";
 import { useCart } from "../../Context/CartContext";
 import { motion } from "framer-motion";
 
