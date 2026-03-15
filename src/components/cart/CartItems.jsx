@@ -22,9 +22,9 @@ const CartItems = ({ setShow, show }) => {
             <motion.div
               key={item.id}
               layout
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
             >
               <ItemInCartItem item={item} />
             </motion.div>
