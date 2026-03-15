@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import myImage from "../../../assets/Gemini_Generated_Image_yfzus8yfzus8yfzu-removebg-preview.png";
+import myImage from "/src/assets/Gemini_Generated_Image_yfzus8yfzus8yfzu-removebg-preview.png";
 const HomeImg = () => {
   return (
     <motion.div
