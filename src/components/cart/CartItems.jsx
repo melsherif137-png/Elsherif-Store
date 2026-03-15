@@ -42,23 +42,23 @@ const CartItems = ({ setShow, show }) => {
           </motion.h3>
         )}
 
-        <motion.div layout className="footer">
-          {cartItems.length > 0 && (
-            <motion.h1 layout className="AllTotal">
-              Total Price : ${grandTotal.toLocaleString()}
-            </motion.h1>
-          )}
-          {cartItems.length > 0 && (
-            <motion.div
-              layout
-              className="ClearButton"
-              onClick={() => setCartItems([])}
-            >
-              Clear All
-              <span className="button-border"></span>
-            </motion.div>
-          )}
-        </motion.div>
+      <motion.div layout className="footer">
+    {cartItems.length > 0 && (
+      <motion.h1 layout className="AllTotal">
+        Total Price : ${grandTotal.toLocaleString()}
+      </motion.h1>
+    )}
+    {cartItems.length > 0 && (
+      <motion.div
+        layout
+        className="ClearButton"
+        onClick={() => setCartItems([])}
+      >
+        Clear All
+        <span className="button-border"></span>
+      </motion.div>
+    )}
+  </motion.div>
       </div>
     </div>
   );
