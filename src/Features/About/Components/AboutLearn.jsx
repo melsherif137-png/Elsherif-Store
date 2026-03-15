@@ -1,7 +1,7 @@
 import { BiBookContent } from "react-icons/bi";
 import { FaRegCreditCard } from "react-icons/fa";
 import { MdDeliveryDining } from "react-icons/md";
-import OneRow from "./OneROw";
+import OneRow from "./OneRow";
 import { motion } from "framer-motion";
 
 const dataForRow = [
