@@ -1,5 +1,7 @@
 .cartMain {
   margin-top: 15vh;
+  width: 100%;
+  overflow: hidden;
 }
 .cartMain .container {
   display: flex;
@@ -153,7 +155,13 @@
   margin-left: 125px;
   font-weight: bold;
 }
-
+button.plusAndMines {
+  transition: 0.4s ease;
+}
+button.plusAndMines:hover {
+  scale: 1.5;
+  transform: translateY(-1px);
+}
 .counts-in-increase button {
   width: 15px;
   height: 15px;
@@ -277,4 +285,129 @@
   font-size: 16px;
   border-radius: 35px;
   cursor: pointer;
+}
+.footer-payment {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15vh 40px;
+}
+@media (max-width: 768px) {
+  .footer-payment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+  }
+  .footer-payment .footer-links {
+    gap: 5px;
+  }
+  .cartMain .footer-payment .footer-links a {
+    font-size: 15px;
+    width: 35px;
+    height: 35px;
+  }
+  .footer-copy-right {
+    font-size: 10px;
+    max-width: 350px;
+    margin-top: 15px;
+  }
+}
+.footer-payment .footer-links {
+  display: flex;
+  gap: 20px;
+}
+.footer-payment .footer-links a {
+  padding: 10px;
+
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: 1px solid var(--text);
+  border-radius: 25px;
+  color: var(--text);
+  text-align: center;
+  transition: 0.4s ease;
+  position: relative;
+}
+
+.footer-payment .footer-links a::before {
+  content: "";
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--mainColor);
+  width: 60px;
+  height: 30px;
+  border-radius: 35px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  font-size: 15px;
+}
+.footer-links a.facebook::before {
+  content: "Facebook";
+  font-size: 12px;
+}
+
+.footer-links a.instagram::before {
+  content: "Instagram";
+  font-size: 12px;
+}
+
+.footer-links a.twitter::before {
+  content: "Twitter";
+  font-size: 12px;
+}
+
+.footer-links a.linkedin::before {
+  content: "LinkedIn";
+  font-size: 12px;
+}
+.footer-payment .footer-links a::after {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 38%;
+  transform: translateX(-50%);
+  background-color: var(--mainColor);
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  z-index: 3;
+  border-bottom-right-radius: 2px;
+  visibility: hidden;
+}
+
+.footer-payment .footer-links a:hover {
+  background-color: var(--mainColor);
+  color: white;
+  border: 1px solid var(--mainColor);
+  transform: scale(1.2);
+}
+.footer-payment .footer-links a:hover::before {
+  visibility: visible;
+  background-color: var(--mainColor);
+}
+.footer-payment .footer-links a:hover::after {
+  visibility: visible;
+  background-color: var(--mainColor);
+}
+.footer-copy-right {
+  height: 100%;
+  padding: 5px;
+  max-width: 200px;
+  line-height: 1.6;
+  font-weight: bold;
+  margin-left: auto;
+  color: var(--text);
 }

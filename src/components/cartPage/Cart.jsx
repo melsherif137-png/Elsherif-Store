@@ -3,6 +3,7 @@ import CartPage from "./CartPage";
 import CartPay from "./CartPay";
 import "./cart.css";
 import ProductInCart from "./ProductInCart";
+import Footer from "./Footer";
 // import { useCart } from "../../Context/CartContext";
 const Cart = () => {
   return (
@@ -11,6 +12,7 @@ const Cart = () => {
         <CartPage />
         <CartPay />
       </div>
+      <Footer />
     </div>
   );
 };

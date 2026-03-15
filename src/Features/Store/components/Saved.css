@@ -16,6 +16,7 @@
   width: 100%;
   flex-wrap: wrap;
   gap: 10px;
+  transition: 1s ease;
 }
 
 .saved-item,
@@ -43,7 +44,8 @@
   }
 }
 
-.saved-item:hover {
+.saved-item:hover,
+.favorite-item:hover {
   transform: translateY(-5px);
 }
 

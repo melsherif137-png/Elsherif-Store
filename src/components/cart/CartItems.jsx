@@ -2,7 +2,6 @@ import "./cartItems.css";
 import ItemInCartItem from "./ItemInCartItem";
 import { useCart } from "../../Context/CartContext";
 import ExInCart from "./ExInCart";
-import { useEffect } from "react";
 
 const CartItems = ({ setShow, show }) => {
   const { cartItems } = useCart();
@@ -20,6 +19,7 @@ const CartItems = ({ setShow, show }) => {
         {cartItems.map((item, index) => {
           return <ItemInCartItem key={item.id} item={item} />;
         })}
+
         {cartItems.length === 0 && (
           <h3 className="Empty">Your cart is empty</h3>
         )}
