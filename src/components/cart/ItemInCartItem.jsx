@@ -7,11 +7,11 @@ const ItemInCartItem = ({ item }) => {
   const total = item.price * item.quantity;
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="popLayout">
       <motion.div
 layout 
         className="item-in-Cart"
-      initial={{ opacity: 0, x: -10 }}
+      initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 200 }}
         transition={{ duration: 0.4 }}
