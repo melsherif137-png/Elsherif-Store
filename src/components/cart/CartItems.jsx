@@ -17,19 +17,17 @@ const CartItems = ({ setShow, show }) => {
         <ExInCart setShow={setShow} />
       </div>
       <div className="container">
-        <AnimatePresence>
+       
           {cartItems.map((item) => (
-            <motion.div
+            <div
               key={item.id}
               layout
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
+ 
             >
               <ItemInCartItem item={item} />
-            </motion.div>
+            </div>
           ))}
-        </AnimatePresence>
+        
 
         {cartItems.length === 0 && (
           <motion.h3
