@@ -19,13 +19,13 @@ const CartItems = ({ setShow, show }) => {
       <div className="container">
        <AnimatePresence mode="popLayout">
           {cartItems.map((item) => (
-            <div
+            <motion.div
               key={item.id}
-              layout
+              layout 
  
             >
               <ItemInCartItem item={item} />
-            </div>
+            </motion.div>
           ))}
 </AnimatePresence>
         
