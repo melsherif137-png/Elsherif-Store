@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import toast, { Toaster } from "react-hot-toast";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import { SavedContext } from "./Context/SavedContext.jsx";
 
 import { CartProvider } from "./Context/CartContext.jsx";
