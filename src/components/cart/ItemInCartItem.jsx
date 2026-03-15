@@ -9,6 +9,7 @@ const ItemInCartItem = ({ item }) => {
   return (
     <AnimatePresence>
       <motion.div
+layout 
         className="item-in-Cart"
         exit={{ opacity: 0, x: 200 }}
         transition={{ duration: 0.4 }}
