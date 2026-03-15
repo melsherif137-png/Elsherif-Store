@@ -2,6 +2,7 @@ import "./cartItems.css";
 import ItemInCartItem from "./ItemInCartItem";
 import { useCart } from "../../Context/CartContext";
 import ExInCart from "./ExInCart";
+import { motion } from "framer-motion";
 
 const CartItems = ({ setShow, show }) => {
   const { cartItems } = useCart();
@@ -23,16 +24,24 @@ const CartItems = ({ setShow, show }) => {
         {cartItems.length === 0 && (
           <h3 className="Empty">Your cart is empty</h3>
         )}
-        {cartItems.length > 0 && (
-          <h1 className="AllTotal">
-            Total Price : ${grandTotal.toLocaleString()}
-          </h1>
-        )}
-        {cartItems.length > 0 && (
-          <div class="ClearButton" onClick={() => setCartItems([])}>
-            Clear All<span class="button-border"></span>
-          </div>
-        )}
+
+        <motion.div layout className="footer">
+  {cartItems.length > 0 && (
+    <motion.h1 layout className="AllTotal">
+      Total Price : ${grandTotal.toLocaleString()}
+    </motion.h1>
+  )}
+  {cartItems.length > 0 && (
+    <motion.div
+      layout
+      className="ClearButton"
+      onClick={() => setCartItems([])}
+    >
+      Clear All
+      <span className="button-border"></span>
+    </motion.div>
+  )}
+</motion.div>
       </div>
     </div>
   );
