@@ -17,7 +17,7 @@ const CartItems = ({ setShow, show }) => {
         <ExInCart setShow={setShow} />
       </div>
       <div className="container">
-       
+       <AnimatePresence mode="popLayout">
           {cartItems.map((item) => (
             <div
               key={item.id}
@@ -27,6 +27,7 @@ const CartItems = ({ setShow, show }) => {
               <ItemInCartItem item={item} />
             </div>
           ))}
+</AnimatePresence>
         
 
         {cartItems.length === 0 && (
