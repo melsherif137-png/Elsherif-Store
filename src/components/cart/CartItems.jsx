@@ -16,38 +16,46 @@ const CartItems = ({ setShow, show }) => {
       <div className="top">
         <ExInCart setShow={setShow} />
       </div>
+
       <div className="container">
+        {/* Cart Items List */}
         <AnimatePresence mode="popLayout">
           {cartItems.map((item) => (
-            <motion.div key={item.id} layout>
+            <motion.div
+              key={item.id}
+              layout
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.3 }}
+            >
               <ItemInCartItem item={item} />
             </motion.div>
           ))}
         </AnimatePresence>
 
-        {cartItems.length === 0 && (
-          <motion.h3
-            className="Empty"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-          >
-            Your cart is empty
-          </motion.h3>
-        )}
+        {/* Empty Cart Message */}
+        <AnimatePresence>
+          {cartItems.length === 0 && (
+            <motion.h3
+              className="Empty"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{ duration: 0.4 }}
+            >
+              Your cart is empty
+            </motion.h3>
+          )}
+        </AnimatePresence>
 
-        <motion.div
-          layout
-          className="footer"
-          transition={{ duration: 0.4, delay: 0.4 }}
-        >
-          {cartItems.length > 0 && (
+        {/* Footer */}
+        {cartItems.length > 0 && (
+          <motion.div layout className="footer" transition={{ duration: 0.4 }}>
             <motion.h1 layout className="AllTotal">
               Total Price : ${grandTotal.toLocaleString()}
             </motion.h1>
-          )}
-          {cartItems.length > 0 && (
+
             <motion.div
               layout
               className="ClearButton"
@@ -56,8 +64,8 @@ const CartItems = ({ setShow, show }) => {
               Clear All
               <span className="button-border"></span>
             </motion.div>
-          )}
-        </motion.div>
+          </motion.div>
+        )}
       </div>
     </div>
   );

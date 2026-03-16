@@ -1,3 +1,4 @@
+import { div } from "framer-motion/client";
 import { useSaved } from "../../../Context/SavedContext";
 import "./Saved.css";
 import { motion, AnimatePresence } from "framer-motion";
@@ -16,25 +17,22 @@ const Saved = () => {
   return (
     <div className="wrapper">
       <h1 className="saved-heading">Saved</h1>
-      <motion.div layout className="saved-container">
-        <AnimatePresence mode="popLayout">
-          {saved.map((item) => {
+      <div className="saved-container">
+        <AnimatePresence>
+          {saved.map((item, index) => {
             if (!item) return null;
             return (
-              <motion.div key={item.id} layout>
+              <motion.div layout key={item.id}>
                 <motion.div
-                  layout
                   className="saved-item"
+                  key={item.id}
                   initial={{ opacity: 0 }}
-                  animate={{
-                    opacity: 1,
-                    transition: { duration: 0.3 },
-                  }}
-                  exit={{
-                    opacity: 0,
-                    scale: 0.5,
-
-                    transition: { duration: 0.6 },
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0, y: -100 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: 0.15 * index,
+                    ease: "easeOut",
                   }}
                 >
                   <img src={item.image} alt={item.name} />
@@ -51,7 +49,7 @@ const Saved = () => {
             );
           })}
         </AnimatePresence>
-      </motion.div>
+      </div>
     </div>
   );
 };
