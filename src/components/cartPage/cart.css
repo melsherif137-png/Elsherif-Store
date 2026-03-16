@@ -103,6 +103,7 @@
   padding: 8px 10px 8px 0;
   border-bottom: 3px solid var(--mainColor);
   padding-bottom: 10px;
+  will-change: transform;
 }
 .itemIn-page:last-child {
   border: none;
@@ -159,7 +160,7 @@ button.plusAndMines {
   transition: 0.4s ease;
 }
 button.plusAndMines:hover {
-  scale: 1.5;
+  scale: 1.1;
   transform: translateY(-1px);
 }
 .counts-in-increase button {
@@ -230,6 +231,7 @@ button.plusAndMines:hover {
 }
 .inputPayment .voucher,
 .apply {
+  display: block;
   border: 2px solid var(--text);
   border-radius: 25px;
   height: 35px;
@@ -246,6 +248,9 @@ button.plusAndMines:hover {
   width: 100%;
   height: 30px;
   color: var(--text);
+}
+.text-payment .InText:nth-child(3) {
+  border-bottom: 1px solid var(--text);
 }
 .text-payment .InText:nth-child(4) {
   margin-top: 10px;
@@ -353,25 +358,26 @@ button.plusAndMines:hover {
   align-items: center;
   visibility: hidden;
   font-size: 15px;
+  z-index: 2;
 }
 .footer-links a.facebook::before {
   content: "Facebook";
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .footer-links a.instagram::before {
   content: "Instagram";
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .footer-links a.twitter::before {
-  content: "Twitter";
-  font-size: 12px;
+  content: "WhatsApp";
+  font-size: 10px;
 }
 
 .footer-links a.linkedin::before {
   content: "LinkedIn";
-  font-size: 12px;
+  font-size: 10px;
 }
 .footer-payment .footer-links a::after {
   content: "";
@@ -386,6 +392,7 @@ button.plusAndMines:hover {
   z-index: 3;
   border-bottom-right-radius: 2px;
   visibility: hidden;
+  z-index: 1;
 }
 
 .footer-payment .footer-links a:hover {
@@ -410,4 +417,13 @@ button.plusAndMines:hover {
   font-weight: bold;
   margin-left: auto;
   color: var(--text);
+}
+span.copyright {
+  font-size: 12px;
+  margin-right: 2px;
+}
+@media (max-width: 768px) {
+  span.copyright {
+    font-size: 9px;
+  }
 }

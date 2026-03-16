@@ -2,10 +2,11 @@ import "./cartItems.css";
 import ItemInCartItem from "./ItemInCartItem";
 import { useCart } from "../../Context/CartContext";
 import ExInCart from "./ExInCart";
+import { motion, AnimatePresence } from "framer-motion";
 
 const CartItems = ({ setShow, show }) => {
-  const { cartItems } = useCart();
-  const { setCartItems } = useCart();
+  const { cartItems, setCartItems } = useCart();
+
   const grandTotal = cartItems.reduce((acc, item) => {
     return acc + item.price * item.quantity;
   }, 0);
@@ -16,23 +17,47 @@ const CartItems = ({ setShow, show }) => {
         <ExInCart setShow={setShow} />
       </div>
       <div className="container">
-        {cartItems.map((item, index) => {
-          return <ItemInCartItem key={item.id} item={item} />;
-        })}
+        <AnimatePresence mode="popLayout">
+          {cartItems.map((item) => (
+            <motion.div key={item.id} layout>
+              <ItemInCartItem item={item} />
+            </motion.div>
+          ))}
+        </AnimatePresence>
 
         {cartItems.length === 0 && (
-          <h3 className="Empty">Your cart is empty</h3>
+          <motion.h3
+            className="Empty"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            Your cart is empty
+          </motion.h3>
         )}
-        {cartItems.length > 0 && (
-          <h1 className="AllTotal">
-            Total Price : ${grandTotal.toLocaleString()}
-          </h1>
-        )}
-        {cartItems.length > 0 && (
-          <div class="ClearButton" onClick={() => setCartItems([])}>
-            Clear All<span class="button-border"></span>
-          </div>
-        )}
+
+        <motion.div
+          layout
+          className="footer"
+          transition={{ duration: 0.4, delay: 0.4 }}
+        >
+          {cartItems.length > 0 && (
+            <motion.h1 layout className="AllTotal">
+              Total Price : ${grandTotal.toLocaleString()}
+            </motion.h1>
+          )}
+          {cartItems.length > 0 && (
+            <motion.div
+              layout
+              className="ClearButton"
+              onClick={() => setCartItems([])}
+            >
+              Clear All
+              <span className="button-border"></span>
+            </motion.div>
+          )}
+        </motion.div>
       </div>
     </div>
   );

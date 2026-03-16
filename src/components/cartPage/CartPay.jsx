@@ -29,16 +29,44 @@ const CartPay = () => {
       transition={{ duration: 0.4 }}
       viewport={{ once: true, amount: 0.1 }}
     >
-      <div className="payment-heading">
+      <motion.div
+        className="payment-heading"
+        initial={{ opacity: 0, y: 15, scale: 0.95 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.4, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
         <h1>Order Summary</h1>
-      </div>
+      </motion.div>
 
-      <div className="inputPayment">
-        <input type="text" placeholder="Discount voucher" className="voucher" />
-        <button className="apply">Apply</button>
-      </div>
+      <motion.div className="inputPayment">
+        <motion.input
+          type="text"
+          placeholder="Discount voucher"
+          className="voucher"
+          initial={{ opacity: 0, x: -15 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
+          viewport={{ once: true }}
+        />
+        <motion.button
+          className="apply"
+          initial={{ opacity: 0, x: 12 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.1, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          Apply
+        </motion.button>
+      </motion.div>
 
-      <div className="text-payment">
+      <motion.div
+        className="text-payment"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.4, delay: 0.7 }}
+        viewport={{ once: true }}
+      >
         <div className="InText">
           <p className="one-text-payment">Sub Total</p>
           <p className="two-text-payment">{formatCurrency(subTotal)}</p>
@@ -49,7 +77,7 @@ const CartPay = () => {
           <p className="two-text-payment">-{formatCurrency(discountValue)}</p>
         </div>
 
-        <div className="InText" style={{ borderBottom: "1px solid black" }}>
+        <div className="InText">
           <p className="one-text-payment">Delivery fee</p>
           <p className="two-text-payment">{formatCurrency(deliveryFee)}</p>
         </div>
@@ -60,15 +88,26 @@ const CartPay = () => {
             {formatCurrency(grandTotalWithDelivery)}
           </p>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="limited">
+      <motion.div
+        className="limited"
+        initial={{ opacity: 0, x: 15 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.4, delay: 0.8 }}
+        viewport={{ once: true }}
+      >
         <p>90 Day Limited Warranty against manufacturer's defects</p>
-      </div>
+      </motion.div>
 
-      <div className="payment-footer">
+      <motion.div
+        className="payment-footer"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.4, delay: 1 }}
+      >
         <button>Checkout Now</button>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };

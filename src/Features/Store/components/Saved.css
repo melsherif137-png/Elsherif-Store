@@ -33,6 +33,7 @@
   flex-direction: column;
   align-items: center;
   transition: 0.4s ease;
+  will-change: transform;
 }
 @media (max-width: 768px) {
   .saved-container .saved-item {

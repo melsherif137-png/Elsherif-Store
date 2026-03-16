@@ -39,7 +39,7 @@ const CartPage = () => {
         </div>
       </div>
       <div className="itemsIn-pageTitle">
-        <AnimatePresence>
+        <AnimatePresence mode="popLayout">
           {cartItems.length === 0 ? (
             <h3 className="emptyCart">Your cart is empty</h3>
           ) : (
@@ -47,11 +47,20 @@ const CartPage = () => {
               const total = item.price * item.quantity;
               return (
                 <motion.div
+                  key={item.id}
                   className="itemIn-page"
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, x: 500 }}
-                  transition={{ duration: 0.4, delay: 0.5 * (index + 1) }}
+                  layout
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.3, delay: 0.5 * (index + 1) },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    scale: 0.8,
+                    transition: { duration: 0.2 },
+                  }}
                 >
                   <div className="main-productIn-page">
                     <img src={item.image} alt="" />

@@ -16,34 +16,42 @@ const Saved = () => {
   return (
     <div className="wrapper">
       <h1 className="saved-heading">Saved</h1>
-      <div className="saved-container">
-        <AnimatePresence>
-          {saved.map((item, index) => {
+      <motion.div layout className="saved-container">
+        <AnimatePresence mode="popLayout">
+          {saved.map((item) => {
             if (!item) return null;
             return (
-              <motion.div
-                className="saved-item"
-                key={item.id}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0, y: -100 }}
-                transition={{
-                  duration: 0.4,
-                  delay: 0.15 * index,
-                  ease: "easeOut",
-                }}
-              >
-                <img src={item.image} alt={item.name} />
-                <h3>{item.name}</h3>
-                <p>${item.price}</p>
-                <button className="delete-btn" onClick={() => deleteItem(item)}>
-                  Delete
-                </button>
+              <motion.div key={item.id} layout>
+                <motion.div
+                  layout
+                  className="saved-item"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: { duration: 0.3 },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    scale: 0.5,
+
+                    transition: { duration: 0.6 },
+                  }}
+                >
+                  <img src={item.image} alt={item.name} />
+                  <h3>{item.name}</h3>
+                  <p>${item.price}</p>
+                  <button
+                    className="delete-btn"
+                    onClick={() => deleteItem(item)}
+                  >
+                    Delete
+                  </button>
+                </motion.div>
               </motion.div>
             );
           })}
         </AnimatePresence>
-      </div>
+      </motion.div>
     </div>
   );
 };

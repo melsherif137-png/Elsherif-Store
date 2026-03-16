@@ -65,6 +65,7 @@
   align-items: center;
   position: relative;
   color: var(--text);
+  will-change: transform;
 }
 @media (max-width: 768px) {
   .cart-items .item-in-Cart {
@@ -150,6 +151,9 @@
   background-color: var(--mainColor);
   color: white;
   border: 1px solid var(--mainColor);
+}
+.AllClear {
+  transition: 0.4s ease;
 }
 .AllTotal {
   padding: 20px;
