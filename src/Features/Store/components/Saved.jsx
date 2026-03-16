@@ -22,6 +22,7 @@ const Saved = () => {
             if (!item) return null;
             return (
               <motion.div
+layout
                 className="saved-item"
                 key={item.id}
                 initial={{ opacity: 0 }}
