@@ -83,10 +83,10 @@
     margin: 0 10px;
   }
   .cart-items .item-in-Cart .cart-textt h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .cart-items .cart-textt p.priceTextt {
-    font-size: 15px;
+    font-size: 13.5px;
   }
   .cart-items .cart-textt p.que {
     font-size: 12px;
@@ -109,7 +109,7 @@
     height: 30px;
   }
   .total span {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 .cart-items .item-in-Cart h4 {
