@@ -108,6 +108,9 @@
     width: 30px;
     height: 30px;
   }
+  .total span {
+    font-size: 15px;
+  }
 }
 .cart-items .item-in-Cart h4 {
   padding: 5px 0;
