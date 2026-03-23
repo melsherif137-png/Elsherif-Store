@@ -1,5 +1,5 @@
 .cartMain {
-  margin-top: 15vh;
+  padding-top: 5vh;
   width: 100%;
   overflow: hidden;
 }
@@ -22,9 +22,6 @@
   color: rgb(164, 163, 163);
 }
 @media (max-width: 1150px) {
-  .cartMain {
-    margin-top: 15vh;
-  }
   .cartMain .container {
     display: flex;
     flex-direction: column;

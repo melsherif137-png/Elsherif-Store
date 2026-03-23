@@ -51,7 +51,11 @@ const CartItems = ({ setShow, show }) => {
 
         {/* Footer */}
         {cartItems.length > 0 && (
-          <motion.div layout className="footer" transition={{ duration: 0.4 }}>
+          <motion.div
+            layout
+            className="footer"
+            transition={{ duration: 0.4, delay: 0.4 }}
+          >
             <motion.h1 layout className="AllTotal">
               Total Price : ${grandTotal.toLocaleString()}
             </motion.h1>

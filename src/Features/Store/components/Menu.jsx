@@ -2,8 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useSaved } from "../../../Context/SavedContext";
 import toast from "react-hot-toast";
+import { AnimatePresence } from "framer-motion";
 
-const Menu = ({ cart }) => {
+const Menu = ({ cart, setSavedMenu, savedMenu }) => {
   const { addItem, addFavorite } = useSaved();
 
   return (
@@ -11,6 +12,7 @@ const Menu = ({ cart }) => {
       className="menu-bar"
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.4 } }}
     >
       <div className="box">
         <div
@@ -22,6 +24,9 @@ const Menu = ({ cart }) => {
 
             if (added) {
               toast.success("saved");
+              setTimeout(() => {
+                setSavedMenu(false);
+              }, 1000);
             } else {
               toast.error("item saved before");
             }
@@ -39,6 +44,9 @@ const Menu = ({ cart }) => {
 
             if (added) {
               toast.success("added to favorite");
+              setTimeout(() => {
+                setSavedMenu(false);
+              }, 1000);
             } else {
               toast.error("item favorite before");
             }

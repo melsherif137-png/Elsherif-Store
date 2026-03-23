@@ -68,8 +68,16 @@
   will-change: transform;
 }
 @media (max-width: 768px) {
+  .cart-items .container {
+    gap: 13px;
+  }
   .cart-items .item-in-Cart {
-    padding: 15px;
+    background-color: var(--itemIn);
+    padding: 5px;
+    border-radius: 18px;
+    margin: 0 8px;
+    box-shadow: 0 12px 5px -8px var(--itemShodow);
+    border: none;
   }
   .cart-items .item-in-Cart div.cart-textt {
     margin: 0 10px;
@@ -90,6 +98,15 @@
   .cart-items .container .AllTotal {
     font-size: 25px;
     padding: 10px;
+  }
+  .buttons {
+    margin-right: 10px;
+  }
+  .buttons .increment {
+    padding: 5px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
   }
 }
 .cart-items .item-in-Cart h4 {

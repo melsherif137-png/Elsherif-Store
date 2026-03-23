@@ -1,3 +1,6 @@
 * {
   scrollbar-width: none;
 }
+.MainLayout {
+  padding-top: 10vh;
+}

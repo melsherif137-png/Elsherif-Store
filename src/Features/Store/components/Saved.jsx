@@ -28,7 +28,7 @@ const Saved = () => {
                   key={item.id}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  exit={{ opacity: 0, y: -100 }}
+                  exit={{ opacity: 0, y: -100, transition: { duration: 0.4 } }}
                   transition={{
                     duration: 0.4,
                     delay: 0.15 * index,

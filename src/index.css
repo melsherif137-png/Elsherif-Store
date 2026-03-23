@@ -12,6 +12,7 @@
   --bgHover: white;
   --itemIn: #b3d6ca;
   --green: #b3d6ca;
+  --itemShodow: rgba(0, 0, 0, 0.2);
 }
 body.dark {
   background-color: black;
@@ -29,6 +30,7 @@ body.dark {
   --itemIn: #546969;
   transition: 1s ease;
   --green: #b3d6ca;
+  --itemShodow: rgba(255, 255, 255, 0.2);
 }
 * {
   box-sizing: border-box;

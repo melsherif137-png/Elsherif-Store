@@ -1,6 +1,5 @@
 .store {
-  height: 90vh;
-  margin-top: 10vh;
+  min-height: 90vh;
 }
 .store .container {
   background-color: var(--bg);

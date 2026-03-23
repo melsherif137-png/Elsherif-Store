@@ -1,5 +1,5 @@
 import Button from "./Button";
-import { easeOut, motion } from "framer-motion";
+import { easeOut, motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { GoKebabHorizontal } from "react-icons/go";
 import Menu from "./Menu";
@@ -9,7 +9,7 @@ const Product = ({ cart, index, onSelect, savedMenu, setSavedMenu }) => {
       className="product"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{
         duration: 0.4,
         delay: index * 0.1,
@@ -27,7 +27,11 @@ const Product = ({ cart, index, onSelect, savedMenu, setSavedMenu }) => {
             });
           }}
         />
-        {savedMenu === cart.id && <Menu cart={cart} />}
+        <AnimatePresence mode="wait">
+          {savedMenu === cart.id && (
+            <Menu cart={cart} setSavedMenu={setSavedMenu} />
+          )}
+        </AnimatePresence>
         <img src={cart.image} alt={cart.name} className="prod-img" />
       </div>
       {/* </Link> */}
