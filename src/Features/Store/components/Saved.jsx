@@ -8,15 +8,19 @@ const Saved = () => {
 
   if (saved.length === 0) {
     return (
-      <div className="saved-empty">
+      <motion.div
+        className="saved-empty"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+      >
         <h2>Your saved items are empty</h2>
-      </div>
+      </motion.div>
     );
   }
 
   return (
     <div className="wrapper">
-      <h1 className="saved-heading">Saved</h1>
       <div className="saved-container">
         <AnimatePresence>
           {saved.map((item, index) => {

@@ -67,13 +67,14 @@
 }
 .Page-details {
   width: 70%;
-  min-height: 450px;
+  max-height: 450px;
+  overflow-y: auto;
+
   /* max-height: fit-content; */
   padding: 5px 10px;
   border: 3px solid var(--mainColor);
   border-radius: 25px;
   color: var(--text);
-  overflow: hidden;
 }
 .pageTitle-header {
   display: flex;

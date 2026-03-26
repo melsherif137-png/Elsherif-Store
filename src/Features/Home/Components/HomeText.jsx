@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-const HomeText = () => {
+import { delay, motion } from "framer-motion";
+const HomeText = ({ step }) => {
   return (
     <div className="Home-text">
       <div className="leftt">
@@ -8,7 +8,7 @@ const HomeText = () => {
           <motion.h1
             className="head-of-Home"
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.5,
               delay: 0.3,
@@ -21,7 +21,7 @@ const HomeText = () => {
           <motion.p
             className="p-of-home"
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.5,
               delay: 0.4,
@@ -38,8 +38,8 @@ const HomeText = () => {
         <motion.div
           className="Buttons"
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <Link to={"/store"}>
             <button>Shop Now</button>

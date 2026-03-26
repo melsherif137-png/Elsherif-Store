@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 .store .container .products {
   width: 80%;
@@ -16,6 +16,154 @@
   gap: 20px;
 }
 
+/* Loading Spinner */
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100vh;
+}
+
+/* FILTER TOP STORE */
+
+.filterTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+.category .All {
+  max-width: 150px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: rgba(209, 208, 208, 0.906);
+}
+.filter-icon {
+  transition: 0.4s ease;
+  margin-left: 10px;
+}
+.filter-icon.active {
+  transform: rotate(180deg);
+}
+.filters {
+  display: flex;
+  top: 100%;
+  left: 50%;
+  flex-direction: column;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.208);
+  backdrop-filter: blur(50px);
+  gap: 10px;
+  margin-top: 10px;
+  position: absolute;
+  z-index: 1000;
+  padding: 5px;
+  border-radius: 15px;
+}
+.filters button {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+  transition: 0.4s ease;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: rgba(224, 223, 223, 0.975);
+}
+.filters button:hover {
+  background-color: rgb(121, 120, 120);
+  color: white;
+}
+/* .filters button:hover {
+  background-color: rgb(121, 120, 120);
+  border-radius: 15px;
+} */
+@media (max-width: 768px) {
+  .filterTop {
+    width: 95%;
+    /* margin: 0 auto; */
+    padding: 10px 20px;
+  }
+  .filters {
+    left: 0;
+  }
+}
+
+.searchFilter {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.searchFilter:hover > input {
+  width: 390px;
+  border: none;
+  color: black;
+}
+input::placeholder {
+  color: transparent;
+  transition: 0.4s ease;
+}
+.searchFilter:hover > input::placeholder {
+  color: rgba(105, 105, 105, 0.568);
+}
+.searchFilter:hover {
+  justify-content: flex-end;
+}
+
+.searchFilter input {
+  position: absolute;
+  width: 50px;
+  color: transparent;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  transition: 0.4s ease;
+  font-size: 18px;
+  z-index: 1;
+  flex-grow: 0;
+  background-color: rgba(209, 208, 208, 0.906);
+}
+.searchFilter input:focus {
+  outline: none;
+}
+
+.searchFilter .searchIcon {
+  position: absolute;
+  color: black;
+  font-size: 20px;
+  transition: 0.4s ease;
+  margin-right: 15px;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .searchFilter:hover input,
+  .searchFilter:focus-within input {
+    width: 150px;
+  }
+}
 .product {
   height: fit-content;
   background-color: var(--cart);
@@ -53,6 +201,7 @@
   overflow: hidden;
   border-radius: 15px;
   position: relative;
+  background-color: var(--bg);
 }
 .menu {
   position: absolute;

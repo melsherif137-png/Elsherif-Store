@@ -8,9 +8,14 @@ const Favorite = () => {
 
   if (favorite.length === 0) {
     return (
-      <div className="saved-empty">
+      <motion.div
+        className="saved-empty"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+      >
         <h2>Your favorite items are empty</h2>
-      </div>
+      </motion.div>
     );
   }
 

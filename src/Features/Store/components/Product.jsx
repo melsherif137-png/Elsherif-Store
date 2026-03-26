@@ -12,7 +12,7 @@ const Product = ({ cart, index, onSelect, savedMenu, setSavedMenu }) => {
       viewport={{ once: true, amount: 0.1 }}
       transition={{
         duration: 0.4,
-        delay: index * 0.1,
+        delay: Math.min(index * 0.05, 0.3),
         ease: "easeOut",
       }}
     >
@@ -39,7 +39,9 @@ const Product = ({ cart, index, onSelect, savedMenu, setSavedMenu }) => {
         <h1 className="prod-name">{cart.name}</h1>
         <span className="rate">
           {[...Array(5)].map((_, index) => (
-            <span key={index}>{index < Math.round(cart.rate) ? "⭐" : ""}</span>
+            <span key={index}>
+              {index < Math.round(cart.rate || 0) ? "⭐" : ""}
+            </span>
           ))}
         </span>
       </div>
@@ -51,7 +53,7 @@ const Product = ({ cart, index, onSelect, savedMenu, setSavedMenu }) => {
         <Button
           product={{
             id: cart.id,
-            name: cart.name,
+            title: cart.name,
             price: cart.price,
             image: cart.image,
             rate: cart.rate,

@@ -2,11 +2,11 @@ import HomeImg from "./HomeImg";
 import HomeText from "./HomeText";
 import { motion } from "framer-motion";
 
-const HomeContent = () => {
+const HomeContent = ({ step }) => {
   return (
     <div className="home-content">
-      <HomeText />
-      <HomeImg />
+      <HomeText step={step} />
+      <HomeImg step={step} />
     </div>
   );
 };

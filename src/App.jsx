@@ -12,7 +12,11 @@ import Saved from "./Features/Store/components/Saved";
 import Favorite from "./Features/Store/components/Favorite";
 import Setting from "./components/Setting";
 import Cart from "./components/cartPage/Cart";
+import Intro from "./components/Intro";
+
 const App = () => {
+  const [step, setStep] = useState(null);
+  const [introShow, setIntroShow] = useState(true);
   const [show, setShow] = useState(false);
   const [settingShow, setSettingShow] = useState(false);
   const [dark, setDark] = useState(() => {
@@ -27,6 +31,11 @@ const App = () => {
       document.body.classList.remove("dark");
     }
   }, [dark]);
+  useEffect(() => {
+    const timer = setTimeout(() => setStep(2), 5000); // يقعد 4 ثواني
+    setTimeout(() => setIntroShow(false), 5000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const darkMode = () => {
     setDark((prev) => {
@@ -59,17 +68,21 @@ const App = () => {
       )}
       {/* 
       {itemDetails && <Item />} */}
-      <MainLayout>
-        <Routes>
-          <Route path="/" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/store" element={<Store />} />
-          <Route path="/store/saved" element={<Saved />} />
-          <Route path="/store/favorite" element={<Favorite />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/Cart" element={<Cart />} />
-        </Routes>
-      </MainLayout>
+      {introShow ? (
+        <Intro step={step} setStep={setStep} />
+      ) : (
+        <MainLayout>
+          <Routes>
+            <Route path="/" element={<Navigate to="/home" replace />} />
+            <Route path="/home" element={<Home step={step} />} />
+            <Route path="/store" element={<Store />} />
+            <Route path="/store/saved" element={<Saved />} />
+            <Route path="/store/favorite" element={<Favorite />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/Cart" element={<Cart />} />
+          </Routes>
+        </MainLayout>
+      )}
     </>
   );
 };

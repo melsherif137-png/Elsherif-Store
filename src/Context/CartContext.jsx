@@ -20,6 +20,12 @@ export const CartProvider = ({ children }) => {
     toast.success("Successfully Added!");
     setCartItems((prev) => {
       const existingItem = prev.find((item) => item.id === product.id);
+      const newProduct = {
+        id: product.id,
+        title: product.title,
+        price: product.price,
+        image: product.images?.[0] || product.image,
+      };
       if (existingItem) {
         return prev.map((item) =>
           item.id === product.id
@@ -28,10 +34,9 @@ export const CartProvider = ({ children }) => {
         );
       }
 
-      return [...prev, { ...product, quantity: 1 }];
+      return [...prev, { ...newProduct, quantity: 1 }];
     });
   };
-
   const updateQuantity = (id, quantity) => {
     setCartItems((prev) =>
       prev.map((item) => (item.id === id ? { ...item, quantity } : item)),
