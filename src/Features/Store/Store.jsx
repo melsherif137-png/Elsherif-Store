@@ -1,11 +1,8 @@
 import products from "../../data/products.json";
 import Product from "./components/Product";
 import "../Store/Store.css";
-// import { Routes, Route } from "react-router-dom";
 import Item from "./Item";
 import { useState, useEffect } from "react";
-// import { createContext } from "react";
-import { FaChevronDown } from "react-icons/fa";
 import Category from "./components/Category";
 import BeatLoader from "react-spinners/BeatLoader";
 

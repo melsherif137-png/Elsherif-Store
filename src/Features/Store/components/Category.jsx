@@ -36,7 +36,12 @@ const Category = ({
   };
   return (
     <div className="filterTop">
-      <div className="category">
+      <motion.div
+        className="category"
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
+      >
         <button
           ref={filterRef}
           className="All"
@@ -75,8 +80,14 @@ const Category = ({
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
-      <div className="searchFilter" onClick={() => inputRef.current.focus()}>
+      </motion.div>
+      <motion.div
+        className="searchFilter"
+        onClick={() => inputRef.current.focus()}
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.1, ease: "easeOut", delay: 0.2 }}
+      >
         <input
           type="text"
           ref={inputRef}
@@ -85,7 +96,7 @@ const Category = ({
           placeholder="search.."
         />
         <IoSearch className="searchIcon" onClick={toggleSearch} />
-      </div>
+      </motion.div>
     </div>
   );
 };

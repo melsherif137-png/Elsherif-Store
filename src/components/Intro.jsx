@@ -1,9 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
-import "./Intro.css";
-import { FaShoppingCart } from "react-icons/fa";
-import { CiHeadphones } from "react-icons/ci";
-import { FaTruck } from "react-icons/fa";
+import "./intro.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function Intro({ step, setStep }) {
@@ -19,7 +15,7 @@ export default function Intro({ step, setStep }) {
           style={{}}
         >
           <DotLottieReact
-            src="public\Loading_car (1).json"
+            src="/Loading_car (1).json"
             autoplay
             loop
             style={{

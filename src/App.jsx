@@ -7,7 +7,6 @@ import MainLayout from "./components/MainLayout";
 import Store from "./Features/Store/Store";
 import CartItems from "./components/cart/CartItems";
 import { useEffect, useState } from "react";
-import Item from "./Features/Store/Item";
 import Saved from "./Features/Store/components/Saved";
 import Favorite from "./Features/Store/components/Favorite";
 import Setting from "./components/Setting";
