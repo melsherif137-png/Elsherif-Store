@@ -21,6 +21,7 @@ const Saved = () => {
 
   return (
     <div className="wrapper">
+      <h3 className="savedH">Saved</h3>
       <div className="saved-container">
         <AnimatePresence>
           {saved.map((item, index) => {

@@ -12,7 +12,7 @@ const Menu = ({ cart, setSavedMenu, savedMenu }) => {
       className="menu-bar"
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.4 } }}
+      exit={{ opacity: 0, y: -10, transition: { duration: 0.4 } }}
     >
       <div className="box">
         <div

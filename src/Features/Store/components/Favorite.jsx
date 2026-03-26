@@ -21,7 +21,7 @@ const Favorite = () => {
 
   return (
     <div className="wrapper">
-      <h1 className="favorite-heading">Favorite</h1>
+      <h1 className="FavoriteH">Favorite</h1>
       <div className="favorite-container">
         <AnimatePresence mode="popLayout">
           {favorite.map((item, index) => {
