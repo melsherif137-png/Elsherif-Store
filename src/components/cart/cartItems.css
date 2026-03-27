@@ -29,7 +29,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  overflow: hidden;
 }
 .Empty {
   font-size: 30px;

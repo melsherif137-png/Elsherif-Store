@@ -15,7 +15,7 @@ import Intro from "./components/Intro";
 
 const App = () => {
   const [step, setStep] = useState(null);
-  const [introShow, setIntroShow] = useState(false);
+  const [introShow, setIntroShow] = useState(true);
   const [show, setShow] = useState(false);
   const [settingShow, setSettingShow] = useState(false);
   const [dark, setDark] = useState(() => {
