@@ -35,6 +35,12 @@
   margin: 0 auto;
   padding: 10px 20px;
 }
+@media (max-width: 768px) {
+  .filterTop {
+    width: 100%;
+    padding: 0 10%;
+  }
+}
 .category {
   display: flex;
   flex-direction: column;
