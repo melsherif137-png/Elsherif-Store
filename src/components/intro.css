@@ -10,10 +10,12 @@
   background: var(--cartitems);
   z-index: 9999;
   scale: 1.2;
-  padding-bottom: 9vh;
 }
 
 @media (max-width: 768px) {
+  .intro {
+    padding-bottom: 8vh;
+  }
   .intoCard {
     font-size: 2rem;
     width: 100px;
