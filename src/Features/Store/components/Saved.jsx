@@ -1,12 +1,32 @@
-import { div } from "framer-motion/client";
+import { useEffect } from "react";
 import { useSaved } from "../../../Context/SavedContext";
 import "./Saved.css";
 import { motion, AnimatePresence } from "framer-motion";
+import BeatLoader from "react-spinners/BeatLoader";
 
-const Saved = () => {
+const Saved = ({ loading, setLoading }) => {
   const { saved, deleteItem } = useSaved();
 
-  if (saved.length === 0) {
+  useEffect(() => {
+    setLoading(true);
+
+    const timer = setTimeout(
+      () => {
+        setLoading(false);
+      },
+      Math.random() * 1000 + 500,
+    );
+
+    return () => clearTimeout(timer);
+  }, [setLoading]);
+
+  // لو Loading شغال
+  if (loading) {
+    return <BeatLoader color="#336b54" className="loading" />;
+  }
+
+  // لو مفيش عناصر محفوظة
+  if (!saved || saved.length === 0) {
     return (
       <motion.div
         className="saved-empty"
@@ -14,7 +34,9 @@ const Saved = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
       >
-        <h2>Your saved items are empty</h2>
+        <h2>
+          Your <span>saved</span> items are empty
+        </h2>
       </motion.div>
     );
   }
@@ -22,6 +44,7 @@ const Saved = () => {
   return (
     <div className="wrapper">
       <h3 className="savedH">Saved</h3>
+
       <div className="saved-container">
         <AnimatePresence>
           {saved.map((item, index) => {

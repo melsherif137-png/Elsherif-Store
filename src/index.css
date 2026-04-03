@@ -13,6 +13,10 @@
   --itemIn: #b3d6ca;
   --green: #b3d6ca;
   --itemShodow: rgba(0, 0, 0, 0.2);
+  --card-gradient: rgb(208, 207, 207);
+  --setting: #758a82;
+  --moreDark: #1b4242;
+  --seconry: #114033;
 }
 body.dark {
   background-color: black;
@@ -31,6 +35,10 @@ body.dark {
   transition: 1s ease;
   --green: #b3d6ca;
   --itemShodow: rgba(255, 255, 255, 0.2);
+  --card-gradient: rgb(147, 147, 147);
+  --setting: #1f3e3e;
+  --moreDark: #8dacac;
+  --seconry: #5b726c;
 }
 * {
   box-sizing: border-box;

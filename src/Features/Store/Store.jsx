@@ -6,12 +6,18 @@ import { useState, useEffect } from "react";
 import Category from "./components/Category";
 import BeatLoader from "react-spinners/BeatLoader";
 
-import { m } from "framer-motion";
-const Store = ({ itemDetails, setItemDetails }) => {
-  const [selected, setSelected] = useState(null);
-  const [loading, setLoading] = useState(false);
+const Store = ({
+  loading,
+  setLoading,
+  itemDetails,
+  setItemDetails,
+  selected,
+  setSelected,
+  categories,
+  setSelectCategory,
+  selectCategory,
+}) => {
   const [savedMenu, setSavedMenu] = useState(null);
-  const [selectCategory, setSelectCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   useEffect(() => {
     setLoading(true);
@@ -38,6 +44,7 @@ const Store = ({ itemDetails, setItemDetails }) => {
       ) : (
         <div className="store">
           <Category
+            categories={categories}
             setSelectCategory={setSelectCategory}
             selectCategory={selectCategory}
             setSearchTerm={setSearchTerm}

@@ -5,7 +5,7 @@
     "price": 500,
     "category": "Accessories",
     "image": "/Products/download (4).jpg",
-    "rate": 3,
+    "rate": 5,
     "insteadOf": 650,
     "description": "High-quality wired keyboard with soft responsive keys, durable build, and comfortable typing experience. Perfect for daily office work and gaming."
   },
@@ -15,7 +15,7 @@
     "price": 300,
     "category": "Accessories",
     "image": "/Products/The Fairphone (Gen_ 6) now with privacy-first _e_OS.jpg",
-    "rate": 3,
+    "rate": 4,
     "insteadOf": 450,
     "description": "Over-ear headphone with clear stereo sound and deep bass. Lightweight design with padded ear cushions for long listening sessions."
   },
@@ -211,7 +211,7 @@
   },
   {
     "id": 22,
-    "name": "Noise Cancelling Headphones",
+    "name": "NC Headphones",
     "price": 1200,
     "category": "Accessories",
     "image": "/Products/noise-cancelling-headphones.jpg",

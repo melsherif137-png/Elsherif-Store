@@ -61,9 +61,9 @@
 }
 .savedH,
 .FavoriteH {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #777;
-  padding: 10px;
+  padding: 20px;
   margin: 0 14vh;
 }
 .saved-item h3 {
@@ -96,13 +96,22 @@
 }
 
 .saved-empty {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+@media (max-width: 768px) {
+  .saved-empty {
+    height: 70vh;
+    padding: 10px;
+  }
+}
 .saved-empty h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #777;
+}
+.saved-empty h2 span {
+  color: var(--text);
+  font-size: 2.8rem;
 }

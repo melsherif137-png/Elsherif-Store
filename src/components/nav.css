@@ -6,7 +6,7 @@
 header {
   background-color: var(--nav);
   backdrop-filter: blur(10px);
-  height: 10vh;
+  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -33,19 +33,7 @@ header .navLinks {
   header .navLinks ul {
     gap: 5px;
   }
-  header .cart {
-    margin-right: 35px;
-  }
-  header .darkMode {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin: 0;
-    display: none;
-  }
+
   .burgerMenu {
     width: 40px;
     height: 40px;
@@ -105,92 +93,132 @@ header .navLinks {
 .navLinks ul a:hover {
   color: white;
 }
-
-.cart {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: none;
-  border: 1px solid var(--mainColor);
-  position: relative;
-  cursor: pointer;
-  transition: 0.4s ease;
-  background-color: var(--bgHover);
-}
-
-.burgerMenu {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: none;
-  border: 1px solid var(--mainColor);
-  position: relative;
-  cursor: pointer;
-  transition: 0.4s ease;
-  background-color: var(--bgHover);
+.navLinks .right {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 23px;
+  gap: 10px;
 }
 .darkMode {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   border: none;
-  padding-top: 5px;
-  border: 1px solid var(--mainColor);
   position: relative;
   cursor: pointer;
   transition: 0.4s ease;
-  font-size: 25px;
+  color: var(--text);
+  font-size: 23px;
+  background-color: transparent;
+}
+.cart {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s ease;
+  color: var(--bgHover);
+  background-color: transparent;
+}
+
+.burgerMenu {
+  color: var(--text);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.4s ease;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 10px;
-  transition: 0.8s ease;
-  color: var(--mainColor);
-  background-color: var(--bgHover);
+  font-size: 23px;
+}
+.darkMode,
+.cart,
+.burgerMenu {
+  width: 40px;
+  height: 40px;
 }
 .cart .icon {
   position: relative;
   top: 1px;
   font-size: 23px;
-  color: var(--mainColor);
+  color: var(--text);
   transition: 0.4s ease;
 }
 .countOfCart {
   position: absolute;
-  bottom: 0;
-  right: -10px;
+  top: -2px;
+  right: -2px;
   padding: 3px;
-  width: 22px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  color: white;
-  background-color: red;
+  color: var(--text);
+  font-size: 12px;
+  background-color: var(--greenWhite);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .countOfCart {
-    height: 23px;
-    font-size: 12px;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    font-weight: bold;
+    top: -2px;
+    right: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6px;
+  }
+  .darkMode,
+  .cart,
+  .burgerMenu {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
   }
 }
 
-.cart:hover,
+/* .cart:hover,
 .darkMode:hover,
 .burgerMenu:hover {
   color: white;
   background-color: var(--mainColor);
   box-shadow: 0 0 10px rgba(8, 130, 149, 0.31);
-}
+} */
 
-.cart.active {
+/* .cart.active {
   background-color: var(--mainColor);
   box-shadow: 0 0 10px rgba(8, 130, 149, 0.31);
-}
+} */
 
-.cart:hover > .icon {
+/* .cart:hover > .icon {
   color: white;
+} */
+.logo {
+  font-size: 30px;
+  font-weight: bold;
 }
-.cart:hover > .countOfCart {
-  color: white;
+.logo a {
+  color: var(--text);
+  transition: 0.4s ease;
+  font-family: "Titan One", sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+.logo a:hover {
+  color: var(--mainColor);
+  text-shadow: 0 0 5px var(--greenWhite);
+}
+@media (max-width: 768px) {
+  .logo {
+    font-size: 24px;
+  }
 }

@@ -79,7 +79,7 @@
 .pageTitle-header {
   display: flex;
   padding: 15px 0;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--mainColor);
 }
 .title-product {
   width: 35%;
@@ -217,6 +217,13 @@ button.plusAndMines:hover {
   padding: 10px;
   font-size: 15px;
 }
+.inputPayment .voucher:focus {
+  outline: none;
+  border-color: var(--mainColor);
+}
+.inputPayment .voucher::placeholder {
+  color: rgb(148, 148, 148);
+}
 .inputPayment .apply {
   flex: 1;
   cursor: pointer;
@@ -273,6 +280,8 @@ button.plusAndMines:hover {
   text-align: center;
   line-height: 1.3;
 }
+
+/* FOOTER  */
 .payment-footer {
   width: 100%;
   margin-top: 35px;
@@ -291,11 +300,10 @@ button.plusAndMines:hover {
 }
 .footer-payment {
   width: 100%;
-  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15vh 40px;
+  padding: 0 8%;
 }
 @media (max-width: 768px) {
   .footer-payment {
@@ -408,13 +416,10 @@ button.plusAndMines:hover {
   background-color: var(--mainColor);
 }
 .footer-copy-right {
-  height: 100%;
-  padding: 5px;
-  max-width: 200px;
-  line-height: 1.6;
-  font-weight: bold;
-  margin-left: auto;
   color: var(--text);
+  max-width: 250px;
+  line-height: 1.6;
+  font-weight: 600;
 }
 span.copyright {
   font-size: 12px;

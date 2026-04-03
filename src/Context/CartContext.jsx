@@ -18,6 +18,7 @@ export const CartProvider = ({ children }) => {
 
   const addItem = (product) => {
     toast.success("Successfully Added!");
+    console.log(cartItems);
     setCartItems((prev) => {
       const existingItem = prev.find((item) => item.id === product.id);
       // const newProduct = {
@@ -45,6 +46,7 @@ export const CartProvider = ({ children }) => {
 
   const increase = (id) => {
     toast.success("Successfully Added!");
+
     setCartItems((prev) =>
       prev.map((item) =>
         item.id === id ? { ...item, quantity: item.quantity + 1 } : item,

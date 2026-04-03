@@ -2,19 +2,23 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 320px;
+  width: 380px;
   height: 100vh;
-  backdrop-filter: blur(15px);
-  background: rgba(255, 255, 255, 0.162);
+  background: var(--setting);
+
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 2000;
   padding: 90px 25px;
   transform: translateX(100%);
-  transition: transform 0.9s ease;
+  transition: transform 0.4s ease;
   display: flex;
   flex-direction: column;
 }
-
+@media (max-width: 650px) {
+  .setting {
+    width: 85%;
+  }
+}
 .setting.active {
   transform: translateX(0);
 }
@@ -24,22 +28,22 @@
   gap: 18px;
 }
 
-.setting .element .setting-link,
-button.dark {
-  display: block;
+.setting .element .setting-link {
+  display: flex;
+  align-items: center;
+  height: 50px;
   padding: 12px 16px;
   border-radius: 10px;
   text-align: center;
   color: var(--text);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   border: none;
   background: rgba(255, 255, 255, 0.467);
   cursor: pointer;
   transition: 0.3s;
 }
-.setting .element a:hover,
-.setting .dark:hover {
+.setting .element a:hover {
   background: rgba(255, 255, 255, 0.673);
   transform: translateX(-5px);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.622);

@@ -8,7 +8,7 @@ const dataForRow = [
   {
     icon: <MdDeliveryDining />,
     h3: "Free Delivery",
-    p: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Aenean Hendrerit Purus Quis Quam.",
+    p: "Fast and reliable delivery to your doorstep within 2–5 business days.",
   },
   {
     icon: <BiBookContent />,

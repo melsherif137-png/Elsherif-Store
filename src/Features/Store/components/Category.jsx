@@ -11,12 +11,12 @@ const Category = ({
   selectCategory,
   setSearchTerm,
   searchTerm,
+  categories,
 }) => {
   const [showFilter, setShowFilter] = useState(false);
   const inputRef = useRef(null);
   const filterRef = useRef(null);
   const [open, setOpen] = useState(false);
-  const categories = ["All", "Electronics", "Accessories", "Wearables"];
 
   const toggleFilter = () => {
     setShowFilter((prev) => !prev);

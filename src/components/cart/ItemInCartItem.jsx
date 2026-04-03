@@ -18,7 +18,7 @@ const ItemInCartItem = ({ item }) => {
     >
       <img src={item.image} alt={item.name} className="itemImage" />
       <div className="cart-textt">
-        <h4>{item.title}</h4>
+        <h4>{item.name}</h4>
         <p className="priceTextt">Price: ${item.price.toLocaleString()} </p>
         <p className="que">Qty: {item.quantity}</p>
       </div>

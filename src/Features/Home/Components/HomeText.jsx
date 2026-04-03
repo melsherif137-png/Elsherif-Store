@@ -14,6 +14,7 @@ const HomeText = ({ step }) => {
               delay: 0.3,
               ease: [0.25, 0.1, 0.25, 1],
             }}
+            viewport={{ once: true, amount: 0.1 }}
           >
             Experience Sound Without Limits
           </motion.h1>
@@ -27,6 +28,7 @@ const HomeText = ({ step }) => {
               delay: 0.4,
               ease: [0.25, 0.1, 0.25, 1],
             }}
+            viewport={{ once: true, amount: 0.1 }}
           >
             Shop the latest over-ear headphones, true wireless Bluetooth
             earbuds, heavy bass subwoofers, and high-capacity power banks.
@@ -40,6 +42,7 @@ const HomeText = ({ step }) => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <Link to={"/store"}>
             <button>Shop Now</button>

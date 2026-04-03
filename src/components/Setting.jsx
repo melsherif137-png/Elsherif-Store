@@ -33,9 +33,6 @@ const Setting = ({ settingShow, setSettingShow, darkMode, dark }) => {
             </div>
           );
         })}
-        <button href="" className="dark" onClick={darkMode}>
-          {dark ? "light Mode" : "Dark Mode"}
-        </button>
       </div>
     </div>
   );

@@ -3,6 +3,8 @@ import ItemInCartItem from "./ItemInCartItem";
 import { useCart } from "../../Context/CartContext";
 import ExInCart from "./ExInCart";
 import { motion, AnimatePresence } from "framer-motion";
+import { div } from "framer-motion/client";
+import { Link } from "react-router-dom";
 
 const CartItems = ({ setShow, show }) => {
   const { cartItems, setCartItems } = useCart();
@@ -37,15 +39,29 @@ const CartItems = ({ setShow, show }) => {
         {/* Empty Cart Message */}
         <AnimatePresence>
           {cartItems.length === 0 && (
-            <motion.h3
-              className="Empty"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.4 }}
-            >
-              Your cart is empty
-            </motion.h3>
+            <div className="empty-cart">
+              <motion.h3
+                className="Empty"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 50 }}
+                transition={{ duration: 0.4 }}
+              >
+                Your cart is empty
+              </motion.h3>
+              <Link to="/store">
+                <motion.button
+                  onClick={() => {
+                    setShow(false);
+                  }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3, delay: 0.6 }}
+                >
+                  Continue Shopping
+                </motion.button>
+              </Link>
+            </div>
           )}
         </AnimatePresence>
 
@@ -70,6 +86,21 @@ const CartItems = ({ setShow, show }) => {
             </motion.div>
           </motion.div>
         )}
+      </div>
+      <div className="cart-actions">
+        <Link to="/Cart" className="goToCartLink">
+          <motion.button
+            onClick={() => {
+              setShow(false);
+            }}
+            className="goToCart"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.6 }}
+          >
+            View Cart
+          </motion.button>
+        </Link>
       </div>
     </div>
   );

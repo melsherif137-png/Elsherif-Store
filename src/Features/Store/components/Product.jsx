@@ -53,7 +53,7 @@ const Product = ({ cart, index, onSelect, savedMenu, setSavedMenu }) => {
         <Button
           product={{
             id: cart.id,
-            title: cart.name,
+            name: cart.name,
             price: cart.price,
             image: cart.image,
             rate: cart.rate,

@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa";
+import { HiOutlineShoppingCart } from "react-icons/hi";
 // import useAllCount from "../Features/Store/components/Button";
 import { CiLight } from "react-icons/ci";
 import "./nav.css";
@@ -9,9 +9,11 @@ import { IoSunnyOutline } from "react-icons/io5";
 import { IoMoonSharp } from "react-icons/io5";
 import { useLocation } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { MdDarkMode } from "react-icons/md";
+
 const links = ["Home", "Store", "About"];
 
-const NavBar = ({ setShow, show, setSetting }) => {
+const NavBar = ({ setShow, show, setSetting, dark, setDark }) => {
   const { cartItems } = useCart();
 
   const handlingShow = () => {
@@ -22,10 +24,7 @@ const NavBar = ({ setShow, show, setSetting }) => {
   return (
     <header>
       <div className="navLinks">
-        {/* <button onClick={darkMode} className="darkMode">
-          {dark ? <IoMoonSharp /> : <IoSunnyOutline />}
-        </button> */}
-        <ul>
+        {/* <ul>
           {links.map((link, index) => {
             return (
               <NavLink
@@ -37,29 +36,39 @@ const NavBar = ({ setShow, show, setSetting }) => {
               </NavLink>
             );
           })}
-        </ul>
+        </ul> */}
+        <div className="logo">
+          <Link to="/">TechStore</Link>
+        </div>
 
         <div className="right">
-          {location.pathname.endsWith("/store") ? (
-            <button
-              className={`cart ${show ? "active" : ""}`}
-              onClick={() => {
-                handlingShow();
-              }}
-            >
-              <FaShoppingCart className="icon" />
-              <span className="countOfCart">{cartItems.length}</span>
+          {dark ? (
+            <button className="darkMode" onClick={() => setDark(false)}>
+              <IoSunnyOutline />
             </button>
           ) : (
-            <button
-              className="burgerMenu"
-              onClick={() => {
-                setSetting(true);
-              }}
-            >
-              <GiHamburgerMenu />
+            <button className="darkMode" onClick={() => setDark(true)}>
+              <IoMoonSharp />
             </button>
           )}
+          <button
+            className={`cart ${show ? "active" : ""}`}
+            onClick={() => {
+              handlingShow();
+            }}
+          >
+            <HiOutlineShoppingCart className="icon" />
+            <span className="countOfCart">{cartItems.length}</span>
+          </button>
+
+          <button
+            className="burgerMenu"
+            onClick={() => {
+              setSetting(true);
+            }}
+          >
+            <GiHamburgerMenu />
+          </button>
         </div>
       </div>
     </header>

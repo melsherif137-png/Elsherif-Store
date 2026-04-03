@@ -2,6 +2,7 @@ import { useState } from "react";
 import Counts from "./Counts";
 import { useCart } from "../../Context/CartContext";
 import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 const Item = ({ cart }) => {
   const { addItem, cartItems } = useCart();
