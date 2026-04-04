@@ -34,7 +34,7 @@
 }
 @media (max-width: 768px) {
   .saved-container .saved-item {
-    width: 350px;
+    width: 330px;
     height: fit-content;
   }
   .saved-container .saved-item img {
@@ -105,6 +105,10 @@
   .saved-empty {
     height: 70vh;
     padding: 10px;
+  }
+  .savedH,
+  .FavoriteH {
+    padding: 20px 0 0 0;
   }
 }
 .saved-empty h2 {

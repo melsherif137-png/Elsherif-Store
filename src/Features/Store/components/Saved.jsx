@@ -35,7 +35,7 @@ const Saved = ({ loading, setLoading }) => {
         transition={{ duration: 0.4, ease: "easeOut" }}
       >
         <h2>
-          Your <span>saved</span> items are empty
+          No <span>saved</span> items yet
         </h2>
       </motion.div>
     );

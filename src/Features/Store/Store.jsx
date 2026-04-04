@@ -5,6 +5,7 @@ import Item from "./Item";
 import { useState, useEffect } from "react";
 import Category from "./components/Category";
 import BeatLoader from "react-spinners/BeatLoader";
+import { motion } from "framer-motion";
 
 const Store = ({
   loading,
@@ -53,16 +54,27 @@ const Store = ({
 
           <div className="container">
             <div className="products">
-              {filteredBySearch.map((cart, index) => (
-                <Product
-                  key={cart.id}
-                  cart={cart}
-                  index={index}
-                  onSelect={() => setSelected(cart)}
-                  savedMenu={savedMenu}
-                  setSavedMenu={setSavedMenu}
-                />
-              ))}
+              {filteredBySearch.length === 0 ? (
+                <motion.h2
+                  className="No-matched"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  No items found
+                </motion.h2>
+              ) : (
+                filteredBySearch.map((cart, index) => (
+                  <Product
+                    key={cart.id}
+                    cart={cart}
+                    index={index}
+                    onSelect={() => setSelected(cart)}
+                    savedMenu={savedMenu}
+                    setSavedMenu={setSavedMenu}
+                  />
+                ))
+              )}
             </div>
           </div>
 

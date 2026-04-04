@@ -113,6 +113,29 @@
   }
 }
 
+/* NO Matched */
+
+.No-matched {
+  max-height: 90vh;
+  position: absolute;
+  width: 100%;
+  padding: 10px 25vh;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  color: rgb(155, 154, 154);
+  font-size: 45px;
+}
+@media (max-width: 768px) {
+  .No-matched {
+    position: absolute;
+    left: 0;
+    font-size: 35px;
+    padding: 10px 10%;
+    min-width: 100%;
+  }
+}
+
 .searchFilter {
   position: relative;
   width: 50px;

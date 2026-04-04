@@ -35,7 +35,7 @@ const Favorite = ({ loading, setLoading }) => {
         transition={{ duration: 0.4, ease: "easeOut" }}
       >
         <h2>
-          Your <span>favorite</span> items are empty
+          No <span>favorite</span> items yet
         </h2>
       </motion.div>
     );
