@@ -84,11 +84,11 @@
   align-items: center;
   justify-content: space-between;
   transition: 0.4s ease;
-  will-change: transform;
+  /* will-change: transform; */
 }
 .featured-card:hover {
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
-  transform: scale(0.8);
+  box-shadow: 0px 5px 30px rgb(129, 129, 129);
+  transform: translateY(-10px) !important;
 }
 
 .featured-card img {
@@ -320,7 +320,8 @@
   width: 600px;
 }
 .history .container button {
-  width: 400px;
+  max-width: 450px;
+  padding: 15px;
   height: 60px;
   border-radius: 35px;
   border: none;
@@ -375,7 +376,7 @@
   padding: 80px 0;
   width: 80%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .home-footer .container .column {
   display: flex;
